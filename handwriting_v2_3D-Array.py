@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding: utf-8
 
 # -*- coding: utf-8 -*-
@@ -19,7 +19,7 @@ plot_size = 0
 
 #筆跡記憶配列　３次元配列ver
 #np.full(((線の本数、描画数、x・y)))
-data = np.full(((10,100,2)),-100)
+data = np.full(((100,1000,2)),-100)
 n = 0
 
 #マウスの操作があるとき呼ばれる関数
@@ -88,16 +88,17 @@ while(1):
     #sを押すとデータを保存
     if k == ord("s"):
         path_w = input('filename=> ')
-        f = open(path_w, 'w')
-        for i in range(n):
-            print (data[i])
-            f.write(str(data[i]))
+        #配列を軽くしてからnumpy形式で保存
+        data0=data[0:n,:,:]
+        np.save(path_w, data0)
         print ("write: ",path_w)
 
     #cを押すとデータクリア
     if k == ord("c"):
         img[:,:,:]=(255,255,255)
+        data = np.full(((100,1000,2)),-100)
         plot_size=0
+        n=0
         print ("clear")
 
 
