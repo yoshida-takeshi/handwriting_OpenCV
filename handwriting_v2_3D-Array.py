@@ -92,6 +92,17 @@ while(1):
         data0=data[0:n,:,:]
         np.save(path_w, data0)
         print ("write: ",path_w)
+        
+        #OpenCVテキストで簡易的な連続記入
+        #リセット
+        n = 0
+        plot_size = 0
+        img[:,:,:]=(255,255,255)
+         
+        #入力情報の表示
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        cv2.putText(img,'Go to the next word',(100,100), font, 1,(0,0,0),1,cv2.LINE_AA)
+        cv2.putText(img,'enter the "C" key',(100,200), font, 1,(0,0,0),1,cv2.LINE_AA)
 
     #cを押すとデータクリア
     if k == ord("c"):
