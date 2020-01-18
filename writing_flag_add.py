@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import numpy as np
 np.set_printoptions(threshold=np.inf)
 s = input("読み込むデータは？：")
@@ -56,4 +59,4 @@ for line in range(kaku_all[0]):
     #50〜59：点関係
 ans = s+"_plus_flag"
 print(data_z_add)
-#np.save(ans,data_z_add)
+np.save(ans,data_z_add)
