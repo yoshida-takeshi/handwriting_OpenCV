@@ -1,10 +1,12 @@
-read a.npy
-read a_plus_flag.npy
-read ei.npy
+####
+read sample/a.npy
+addflg_range 10 0 0 100
+write a_flg.npy
 
+####
+read sample/ei.npy
 addflg_range 10 0 0 0
 addflg_start 20 1 10
 addflg_end 30 2 20
 addflg_per 40 3 50 100
-
-write a_flg.npy
+write ei_flg.npy
