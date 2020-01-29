@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import sys
@@ -82,6 +82,8 @@ for VectData0 in VectData:
 
 
 #プログラム終了
-key = input('Please enter to finish.')
+key = raw_input('Please enter to finish.')
+#python3# key = input('Please enter to finish.')
+
 exit()
 
