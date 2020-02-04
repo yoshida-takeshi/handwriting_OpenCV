@@ -1,0 +1,14 @@
+####
+read sample/ku_001.npy
+addflg_range 10 0 0 100
+write ku_001_plus_flag.npy
+
+####
+read sample/ku_001.npy
+addflg_range 10 0 0 0
+addflg_range 10 1 0 0
+addflg_per 31 0 90 100
+addflg_per 60 1 30 36
+addflg_per 61 1 36 37
+addflg_per 21 1 70 100
+write ku_001_plus_flag.npy

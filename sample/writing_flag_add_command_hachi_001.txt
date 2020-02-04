@@ -1,0 +1,12 @@
+####
+read sample/hachi_001.npy
+addflg_range 10 0 0 100
+write hachi_001_plus_flag.npy
+
+####
+read sample/hachi_001.npy
+addflg_range 10 0 0 0
+addflg_range 10 1 0 0
+addflg_per 21 0 80 100
+addflg_per 22 1 80 100
+write hachi_001_plus_flag.npy

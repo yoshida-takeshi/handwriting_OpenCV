@@ -1,0 +1,14 @@
+####
+read sample/sa_001.npy
+addflg_range 10 0 0 100
+write sa_001_plus_flag.npy
+
+####
+read sample/sa_001.npy
+addflg_range 10 0 0 0
+addflg_range 10 1 0 0
+addflg_range 10 2 0 0
+addflg_per 30 0 90 100
+addflg_per 22 1 70 100
+addflg_per 21 2 70 100
+write sa_001_plus_flag.npy
